@@ -61,7 +61,7 @@ EduCore/
 ### 1. Clone the Repository
 
 ```bash
-git clone [](https://github.com/Mousa-Joudeh/EduCore-Student-Portal.git)
+git clone https://github.com/Mousa-Joudeh/EduCore-Student-Portal.git
 ```
 
 Then open the project folder:
