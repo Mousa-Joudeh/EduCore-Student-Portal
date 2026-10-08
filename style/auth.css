@@ -1,0 +1,432 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f6f8;
+}
+
+/* =========================
+   Authentication Layout
+========================= */
+
+.auth-page {
+    min-height: 100vh;
+    display: flex;
+}
+
+/* Left Side */
+
+.auth-banner {
+    width: 45%;
+    min-height: 100vh;
+
+    background:
+        linear-gradient(rgba(10, 25, 45, 0.82), rgba(10, 25, 45, 0.82)),
+        url("../assets/auth-bg.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 50px 60px;
+}
+
+/* Right Side */
+
+.auth-form-section {
+    width: 55%;
+    min-height: 100vh;
+    background-color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px;
+
+    overflow-y: auto;
+}
+
+.auth-form-container {
+    width: 100%;
+    max-width: 430px;
+}
+/* =========================
+   Logo
+========================= */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+}
+
+.logo h2 {
+    font-size: 26px;
+}
+
+.logo h2 span {
+    color: #ff6b1a;
+}
+
+/* =========================
+   Banner Content
+========================= */
+
+.banner-content {
+    margin-top: auto;
+    margin-bottom: auto;
+
+    max-width: 430px;
+}
+
+.banner-content h1 {
+    font-size: 48px;
+    line-height: 1.1;
+    max-width: 400px;
+}
+
+.banner-content h1 span {
+    display: block;
+    color: #ff6b1a;
+}
+
+.orange-line {
+    width: 45px;
+    height: 3px;
+
+    background-color: #ff6b1a;
+
+    margin: 25px 0;
+}
+
+.banner-content p {
+    color: #c4cad3;
+
+    font-size: 16px;
+    line-height: 1.7;
+
+    max-width: 400px;
+}
+
+/* =========================
+   Form Heading
+========================= */
+
+.auth-form-container h2 {
+    font-size: 32px;
+    color: #111827;
+
+    margin-bottom: 8px;
+}
+
+.form-description {
+    color: #6b7280;
+    margin-bottom: 30px;
+}
+
+/* =========================
+   Inputs
+========================= */
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+
+    color: #374151;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    margin-bottom: 8px;
+}
+
+.input-group input {
+    width: 100%;
+    height: 52px;
+
+    padding: 0 16px;
+
+    border: 1px solid #d8dde5;
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+.input-group input:focus {
+    border-color: #ff6b1a;
+
+    box-shadow: 0 0 0 3px rgba(255, 107, 26, 0.1);
+}
+
+/* =========================
+   Remember Me
+========================= */
+
+.form-options {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    color: #4b5563;
+
+    font-size: 14px;
+
+    cursor: pointer;
+}
+
+/* =========================
+   Error
+========================= */
+
+.error-message {
+    color: #b91c1c;
+    font-size: 13px;
+    margin-bottom: 12px;
+    min-height: 18px;
+}
+
+/* Input Hint */
+
+.input-hint {
+    margin-top: 7px;
+    font-size: 12px;
+    color: #7c8798;
+    line-height: 1.4;
+}
+
+/* Field Error */
+
+.field-error {
+    display: none;
+    margin-top: 7px;
+    padding: 8px 10px;
+
+    background-color: #fff1f2;
+    border-left: 3px solid #dc2626;
+    border-radius: 5px;
+
+    color: #b91c1c;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+/* Show Error */
+
+.field-error.show {
+    display: block;
+}
+
+/* Invalid Input */
+
+.input-wrapper input.input-error {
+    border-color: #dc2626;
+    background-color: #fffafa;
+}
+
+.input-wrapper input.input-error:focus {
+    border-color: #dc2626;
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+/* =========================
+   Button
+========================= */
+
+.auth-btn {
+    width: 100%;
+    height: 52px;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: #ff6b1a;
+    color: white;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.auth-btn:hover {
+    background-color: #e95b0c;
+}
+
+/* =========================
+   Divider
+========================= */
+
+.divider {
+    display: flex;
+    align-items: center;
+
+    margin: 28px 0;
+
+    color: #9ca3af;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+
+    flex: 1;
+
+    height: 1px;
+
+    background-color: #e5e7eb;
+}
+
+.divider span {
+    padding: 0 15px;
+}
+
+/* =========================
+   Register Link
+========================= */
+
+.auth-switch {
+    text-align: center;
+
+    color: #6b7280;
+
+    font-size: 14px;
+}
+
+.auth-switch a {
+    color: #ff6b1a;
+
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+.auth-switch a:hover {
+    text-decoration: underline;
+}
+/* =========================
+   Input Icons
+========================= */
+
+.input-wrapper {
+    position: relative;
+}
+
+.input-wrapper input {
+    padding-left: 45px;
+}
+
+.input-icon {
+    position: absolute;
+
+    left: 16px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #7c8798;
+
+    font-size: 15px;
+}
+
+.password-toggle {
+    position: absolute;
+
+    right: 16px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #7c8798;
+
+    cursor: pointer;
+}
+
+.password-toggle:hover {
+    color: #ff6b1a;
+}
+
+.input-wrapper input {
+    padding-left: 45px;
+}
+
+.input-wrapper input:has(+ .password-toggle) {
+    padding-right: 45px;
+}
+
+.register-switch {
+    margin-top: 25px;
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 900px) {
+    .auth-banner {
+        width: 40%;
+        padding: 40px 30px;
+    }
+
+    .auth-form-section {
+        width: 60%;
+        padding: 30px;
+    }
+
+    .banner-content h1 {
+        font-size: 38px;
+    }
+}
+
+@media (max-width: 700px) {
+    .auth-page {
+        display: block;
+    }
+
+    .auth-banner {
+        display: none;
+    }
+
+    .auth-form-section {
+        width: 100%;
+        min-height: 100vh;
+
+        padding: 30px 20px;
+    }
+
+    .auth-form-container {
+        max-width: 420px;
+    }
+}

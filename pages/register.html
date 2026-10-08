@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+
+        <title>EduCore | Register</title>
+
+        <link
+            rel="stylesheet"
+            href="../style/auth.css"
+        />
+
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        />
+    </head>
+
+    <body>
+        <main class="auth-page">
+            <!-- Left Side -->
+            <section class="auth-banner">
+                <div class="logo">
+                    <img
+                        src="../assets/educore-logo.svg"
+                        alt="EduCore Logo"
+                    />
+                    <h2>Edu<span>Core</span></h2>
+                </div>
+
+                <div class="banner-content">
+                    <h1>
+                        Start Your Learning
+                        <span>Journey Today</span>
+                    </h1>
+
+                    <div class="orange-line"></div>
+
+                    <p>
+                        Create your account and access your courses, grades, and academic progress
+                        in one place.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Right Side -->
+            <section class="auth-form-section">
+                <div class="auth-form-container">
+                    <h2>Create Account</h2>
+
+                    <p class="form-description">Create your EduCore student account</p>
+
+                    <form id="registerForm">
+                        <!-- Full Name -->
+                        <div class="input-group">
+                            <label for="fullName">Full Name</label>
+
+                            <div class="input-wrapper">
+                                <i class="fa-regular fa-user input-icon"></i>
+
+                                <input
+                                    type="text"
+                                    id="fullName"
+                                    placeholder="First name and last name"
+                                />
+                            </div>
+
+                            <p class="input-hint">Enter your first and last name.</p>
+
+                            <p
+                                class="field-error"
+                                id="fullNameError"
+                            ></p>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="input-group">
+                            <label for="email">Email</label>
+
+                            <div class="input-wrapper">
+                                <i class="fa-regular fa-envelope input-icon"></i>
+
+                                <input
+                                    type="email"
+                                    id="email"
+                                    placeholder="example@email.com"
+                                />
+                            </div>
+
+                            <p
+                                class="field-error"
+                                id="emailError"
+                            ></p>
+                        </div>
+
+                        <!-- Student ID -->
+                        <div class="input-group">
+                            <label for="studentId">Student ID</label>
+
+                            <div class="input-wrapper">
+                                <i class="fa-regular fa-id-card input-icon"></i>
+
+                                <input
+                                    type="text"
+                                    id="studentId"
+                                    placeholder="Enter 6-digit student ID"
+                                    maxlength="6"
+                                    inputmode="numeric"
+                                />
+                            </div>
+
+                            <p class="input-hint">Student ID must contain exactly 6 numbers.</p>
+
+                            <p
+                                class="field-error"
+                                id="studentIdError"
+                            ></p>
+                        </div>
+
+                        <!-- Password -->
+                        <div class="input-group">
+                            <label for="password">Password</label>
+
+                            <div class="input-wrapper">
+                                <i class="fa-solid fa-lock input-icon"></i>
+
+                                <input
+                                    type="password"
+                                    id="password"
+                                    placeholder="Create a password"
+                                />
+
+                                <i
+                                    class="fa-regular fa-eye password-toggle"
+                                    id="togglePassword"
+                                ></i>
+                            </div>
+
+                            <p class="input-hint">
+                                At least 8 characters with letters and numbers.
+                            </p>
+
+                            <p
+                                class="field-error"
+                                id="passwordError"
+                            ></p>
+                        </div>
+
+                        <!-- Confirm Password -->
+                        <div class="input-group">
+                            <label for="confirmPassword">Confirm Password</label>
+
+                            <div class="input-wrapper">
+                                <i class="fa-solid fa-lock input-icon"></i>
+
+                                <input
+                                    type="password"
+                                    id="confirmPassword"
+                                    placeholder="Confirm your password"
+                                />
+                            </div>
+
+                            <p
+                                class="field-error"
+                                id="confirmPasswordError"
+                            ></p>
+                        </div>
+
+                        <button
+                            type="submit"
+                            class="auth-btn"
+                        >
+                            Create Account
+                        </button>
+                    </form>
+
+                    <p class="auth-switch register-switch">
+                        Already have an account?
+                        <a href="./index.html">Sign in</a>
+                    </p>
+                </div>
+            </section>
+        </main>
+
+        <script
+            type="module"
+            src="../js/auth.js"
+        ></script>
+    </body>
+</html>

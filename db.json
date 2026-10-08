@@ -1,0 +1,118 @@
+{
+  "students": [
+    {
+      "id": "iwfueaYtAVQ",
+      "fullName": "Mousa Zaki Joudeh",
+      "email": "mousa@gmail.com",
+      "studentId": "123456",
+      "password": "mousa123"
+    },
+    {
+      "fullName": "Abdallah Zaki Joudeh",
+      "email": "abdallajoudeh14@gmail.com",
+      "studentId": "111234",
+      "password": "1234567d",
+      "courseIds": [],
+      "id": "RfpQHqISq0A"
+    }
+  ],
+  "courses": [
+    {
+      "id": "1",
+      "name": "HTML & CSS",
+      "teacherId": "1"
+    },
+    {
+      "id": "2",
+      "name": "JavaScript",
+      "teacherId": "2"
+    },
+    {
+      "id": "3",
+      "name": "APIs",
+      "teacherId": "2"
+    },
+    {
+      "id": "4",
+      "name": "Git & GitHub",
+      "teacherId": "3"
+    },
+    {
+      "id": "5",
+      "name": "UI/UX Fundamentals",
+      "teacherId": "4"
+    },
+    {
+      "id": "6",
+      "name": "Responsive Web Design",
+      "teacherId": "1"
+    }
+  ],
+  "teachers": [
+    {
+      "id": "1",
+      "name": "Ahmad Khalil"
+    },
+    {
+      "id": "2",
+      "name": "Mohammad Ali"
+    },
+    {
+      "id": "3",
+      "name": "Sara Ahmad"
+    },
+    {
+      "id": "4",
+      "name": "Omar Khaled"
+    }
+  ],
+  "enrollments": [
+    {
+      "id": "1",
+      "studentId": "iwfueaYtAVQ",
+      "courseId": "1"
+    },
+    {
+      "id": "2",
+      "studentId": "iwfueaYtAVQ",
+      "courseId": "2"
+    },
+    {
+      "id": "3",
+      "studentId": "iwfueaYtAVQ",
+      "courseId": "3"
+    },
+    {
+      "id": "4",
+      "studentId": "iwfueaYtAVQ",
+      "courseId": "4"
+    }
+  ],
+  "scores": [
+    {
+      "id": "1",
+      "studentId": "iwfueaYtAVQ",
+      "courseId": "1",
+      "score": 92
+    },
+    {
+      "id": "2",
+      "studentId": "iwfueaYtAVQ",
+      "courseId": "2",
+      "score": 85
+    },
+    {
+      "id": "3",
+      "studentId": "iwfueaYtAVQ",
+      "courseId": "3",
+      "score": 88
+    },
+    {
+      "id": "4",
+      "studentId": "iwfueaYtAVQ",
+      "courseId": "4",
+      "score": 90
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

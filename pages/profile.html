@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+
+        <title>EduCore | Profile</title>
+
+        <link
+            rel="stylesheet"
+            href="../style/dashboard.css"
+        />
+
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        />
+    </head>
+
+    <body>
+        <!-- ==============================
+         Sidebar
+    ============================== -->
+
+        <aside
+            class="sidebar"
+            id="sidebar"
+        >
+            <button
+                class="sidebar-close"
+                id="sidebarClose"
+                type="button"
+                aria-label="Close navigation menu"
+            >
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="sidebar-logo">
+                <img
+                    src="../assets/educore-logo.svg"
+                    alt="EduCore Logo"
+                />
+                <h2>Edu<span>Core</span></h2>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a
+                    href="./dashboard.html"
+                    class="nav-link"
+                >
+                    <i class="fa-solid fa-house"></i>
+                    <span>Dashboard</span>
+                </a>
+
+                <a
+                    href="./courses.html"
+                    class="nav-link"
+                >
+                    <i class="fa-solid fa-book-open"></i>
+                    <span>My Courses</span>
+                </a>
+
+                <a
+                    href="./grades.html"
+                    class="nav-link"
+                >
+                    <i class="fa-solid fa-chart-column"></i>
+                    <span>Grades</span>
+                </a>
+
+                <a
+                    href="./profile.html"
+                    class="nav-link active"
+                >
+                    <i class="fa-regular fa-user"></i>
+                    <span>Profile</span>
+                </a>
+            </nav>
+        </aside>
+
+        <div
+            class="sidebar-overlay"
+            id="sidebarOverlay"
+        ></div>
+
+        <!-- ==============================
+         Main Content
+    ============================== -->
+
+        <main class="main-content">
+            <!-- Topbar -->
+
+            <header class="topbar">
+                <button
+                    class="menu-toggle"
+                    id="menuToggle"
+                    type="button"
+                    aria-label="Open navigation menu"
+                    aria-controls="sidebar"
+                    aria-expanded="false"
+                >
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <div class="topbar-title">
+                    <h2>Profile</h2>
+                </div>
+
+                <div class="topbar-user">
+                    <div class="user-info">
+                        <span
+                            class="user-name"
+                            id="topbarName"
+                        >
+                            Student Name
+                        </span>
+                        <span class="user-role">Student</span>
+                    </div>
+
+                    <div class="user-avatar">
+                        <i class="fa-regular fa-user"></i>
+                    </div>
+
+                    <button
+                        class="logout-btn"
+                        id="logoutBtn"
+                    >
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                        <span>Logout</span>
+                    </button>
+                </div>
+            </header>
+
+            <!-- ==============================
+             Profile Content
+        ============================== -->
+
+            <section class="profile-page">
+                <div class="page-heading">
+                    <div>
+                        <h1>My Profile</h1>
+                        <p>View and manage your personal information.</p>
+                    </div>
+                </div>
+
+                <!-- Profile Card -->
+
+                <div class="profile-card">
+                    <div class="profile-header">
+                        <div class="profile-avatar">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+
+                        <div class="profile-header-info">
+                            <h2 id="profileName">Student Name</h2>
+                            <p>EduCore Student</p>
+                        </div>
+
+                        <button
+                            class="edit-profile-btn"
+                            id="editProfileBtn"
+                        >
+                            <i class="fa-solid fa-pen"></i>
+                            Edit Profile
+                        </button>
+                    </div>
+
+                    <!-- Personal Information -->
+
+                    <div class="profile-details">
+                        <h3>Personal Information</h3>
+
+                        <div class="profile-info-grid">
+                            <div class="profile-info-item">
+                                <span>Full Name</span>
+                                <p id="profileFullName">-</p>
+                            </div>
+
+                            <div class="profile-info-item">
+                                <span>Email Address</span>
+                                <p id="profileEmail">-</p>
+                            </div>
+
+                            <div class="profile-info-item">
+                                <span>Student ID</span>
+                                <p id="profileStudentId">-</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- ==============================
+         Edit Profile Modal
+    ============================== -->
+
+        <div
+            class="modal-overlay"
+            id="editProfileModal"
+            hidden
+        >
+            <div
+                class="modal-content"
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby="modalTitle"
+            >
+                <div class="modal-header">
+                    <h2 id="modalTitle">Edit Profile</h2>
+
+                    <button
+                        class="modal-close"
+                        id="closeModalBtn"
+                        type="button"
+                        aria-label="Close"
+                    >
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+
+                <form id="editProfileForm">
+                    <div class="modal-body">
+                        <div class="modal-form-group">
+                            <label for="editFullName">Full Name</label>
+                            <input
+                                type="text"
+                                id="editFullName"
+                                name="fullName"
+                                required
+                            />
+                        </div>
+
+                        <div class="modal-form-group">
+                            <label for="editEmail">Email Address</label>
+                            <input
+                                type="email"
+                                id="editEmail"
+                                name="email"
+                                required
+                            />
+                        </div>
+
+                        <p
+                            class="modal-message"
+                            id="modalMessage"
+                            role="status"
+                            aria-live="polite"
+                        ></p>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button
+                            type="button"
+                            class="modal-cancel-btn"
+                            id="cancelModalBtn"
+                        >
+                            Cancel
+                        </button>
+
+                        <button
+                            type="submit"
+                            class="modal-save-btn"
+                            id="saveProfileBtn"
+                        >
+                            Save Changes
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <script
+            type="module"
+            src="../js/profile.js"
+        ></script>
+        <script src="../js/sidebar.js"></script>
+    </body>
+</html>
